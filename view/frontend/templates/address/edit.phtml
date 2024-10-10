@@ -1,0 +1,13 @@
+<?php
+/** @var \Magento\Customer\Block\Address\Edit $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<!-- Add this inside the form, where appropriate -->
+<div class="field area">
+    <label class="label" for="area"><span><?= $escaper->escapeHtml(__('Area')) ?></span></label>
+    <div class="control">
+        <input type="text" name="area" id="area" title="<?= $escaper->escapeHtmlAttr(__('Area')) ?>"
+               value="<?= $escaper->escapeHtmlAttr($block->getAddress()->getArea()) ?>"
+               class="input-text" data-validate="{required:false}">
+    </div>
+</div>

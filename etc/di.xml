@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Magento\Customer\Model\Address" type="SajidPatel\CustomAddress\Model\Address" />
+
+    <!-- [TODO: test if this works otherwise use the QuoteManagement plugin] -->
+    <!-- Plugin to copy area to quote shipping address -->
+    <type name="Magento\Quote\Model\ShippingAddressManagement">
+        <plugin
+            name="sajidpatel_copy_area_to_quote_shipping_address"
+            type="SajidPatel\CustomerAddress\Plugin\Quote\Model\ShippingAddressManagementPlugin" />
+    </type>
+
+    <!-- Plugin to copy area to quote billing address -->
+    <type name="Magento\Quote\Model\BillingAddressManagement">
+        <plugin
+            name="sajidpatel_copy_area_to_quote_billing_address"
+            type="SajidPatel\CustomerAddress\Plugin\Quote\Model\BillingAddressManagementPlugin" />
+    </type>
+
+    <!-- [TODO: test if this works otherwise use the ShippingAddressManagement and BillingAddressManagement plugin] -->
+    <!-- Plugin to copy area from quote to order address -->
+    <type name="Magento\Quote\Model\QuoteManagement">
+        <plugin name="sajidpatel_copy_area_to_order_address" type="SajidPatel\CustomerAddress\Plugin\Quote\Model\QuoteManagementPlugin" />
+    </type>
+</config>

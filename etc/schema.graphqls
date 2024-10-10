@@ -1,0 +1,27 @@
+extend type CustomerAddress {
+    area: String @doc(description: "The customer's area")
+}
+
+extend input CustomerAddressInput {
+    area: String @doc(description: "The customer's area")
+}
+
+extend type ShippingAddress {
+    area: String @doc(description: "The customer's area")
+}
+
+extend input ShippingAddressInput {
+    area: String @doc(description: "The customer's area")
+}
+
+extend type BillingAddress {
+    area: String @doc(description: "The customer's area")
+}
+
+extend input BillingAddressInput {
+    area: String @doc(description: "The customer's area")
+}
+
+extend type OrderAddress {
+    area: String @doc(description: "The customer's area")
+}

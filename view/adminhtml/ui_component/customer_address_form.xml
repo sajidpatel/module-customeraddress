@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="../../../../../vendor/magento/module-ui/view/base/ui_component/etc/definition.xsd">
+    <fieldset name="address">
+        <field name="area">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="componentType" xsi:type="string">field</item>
+                    <item name="label" xsi:type="string">Area</item>
+                    <item name="dataScope" xsi:type="string">area</item>
+                    <item name="sortOrder" xsi:type="number">150</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>
